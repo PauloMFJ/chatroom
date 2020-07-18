@@ -8,7 +8,7 @@ import { ChatroomComponent } from './shared/components/chatroom/chatroom.compone
 @NgModule({
   declarations: [
     AppComponent,
-    ChatroomComponent
+    ChatroomComponent,
   ],
   imports: [
     BrowserModule,
