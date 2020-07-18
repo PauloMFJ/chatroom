@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/styles/_variables.scss';
+
+// Reset
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Fonts
+.roboto {
+  font-family: $roboto;
+}
+
+.open-sans {
+  font-family: $open-sans;
+}
+
+// Defaults
+html, body {
+  @extend .open-sans;
+  font-display: auto;
+  color: $gray-dark;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+}
+
+// Defaults
+h1, h2, h3, h4, h5, h6 {
+  @extend .roboto;
+  font-weight: normal;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $dark;
+}
