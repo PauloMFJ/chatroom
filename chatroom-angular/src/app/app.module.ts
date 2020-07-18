@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChatroomComponent } from './shared/components/chatroom/chatroom.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChatroomComponent
   ],
   imports: [
     BrowserModule,

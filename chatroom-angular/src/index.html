@@ -1,13 +1,65 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>ChatroomAngular</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+	<head>
+		<meta charset="utf-8">
+	    <base href="/">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	    <title>Chatroom</title>
+
+	    <style type="text/css">
+	        body, html {
+	            height: 100%;
+	            margin: 0;
+	            padding: 0;
+	            position: relative;
+	        }
+
+			.loader {
+				position: relative;
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    justify-content: center;
+			    height: 100%;
+			}
+
+			.loader > img {
+		        max-width: 156px;
+		        max-height: 156px;
+			}
+
+			.on-load {
+			    animation: on-load .1s ease-in both;
+			}
+
+			@keyframes on-load {
+			    from { opacity: 0; }
+			    to   { opacity: 1; }
+			}
+
+			.pulse {
+				animation: pulse 2s ease-in-out infinite;
+			}
+
+			@keyframes pulse {
+			    0%   { transform: scale(0.9); opacity: 0.7; }
+			    50%  { transform: scale(1);   opacity: 1; }
+			    100% { transform: scale(0.9); opacity: 0.7; }
+			}
+
+			.noscript-warning {
+				margin-top: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<app-root>
+			<div class="on-load loader">
+				<img src="../../../assets/images/chatroom.svg" class="pulse">
+				<noscript class="noscript-warning">Please enable JavaScript to continue using this application.</noscript>
+			</div>
+		</app-root>
+	</body>
 </html>
