@@ -19,4 +19,4 @@ ng build --configuration production
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for further details.
 
-Contents of this site by Paulo Jorge © 2019 - 2020. All rights reserved.
+Contents of this site by [Paulo Jorge](https://www.paulojorge.co.uk/). All rights reserved.
