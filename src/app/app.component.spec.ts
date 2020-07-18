@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'chatroom-angular'`, () => {
+  it(`should have as title 'ng-chatroom'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('chatroom-angular');
+    expect(app.title).toEqual('ng-chatroom');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('chatroom-angular app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ng-chatroom app is running!');
   });
 });

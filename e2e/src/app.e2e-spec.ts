@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('chatroom-angular app is running!');
+    expect(page.getTitleText()).toEqual('ng-chatroom app is running!');
   });
 
   afterEach(async () => {
