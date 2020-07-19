@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatroomComponent } from './shared/components/chatroom/chatroom.component';
 import { NameFormComponent } from './shared/components/name-form/name-form.component';
+import { MessageComponent } from './shared/components/message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatroomComponent,
     NameFormComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <form [formGroup]="userForm"
     class="change-name-container">
-    <h1>Welcome!</h1>
+    <h1>{{ user?.name ? 'Welcome ' + user?.name : 'Welcome' }}!</h1>
     <div class="field">
         <input type="text"
             placeholder="Enter your nickname..."
@@ -10,5 +10,5 @@
     <button class="btn"
         type="submit"
         (click)="submit()"
-        [disabled]="!userForm.valid">Set Name</button>
+        [disabled]="userForm.invalid">Set Name</button>
 </form>

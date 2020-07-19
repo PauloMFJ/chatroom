@@ -1,0 +1,44 @@
+@import '~src/assets/styles/_variables.scss';
+
+:host {
+	display: flex;
+
+	.message {
+		display: inline-block;
+		padding: 8px 16px;
+		border-radius: 16px;
+		max-width: 75%;
+		margin-bottom: 4px;
+		word-wrap: break-word;
+
+		&.sent {
+			background: $blue;
+			color: $white;
+			margin-left: auto;
+
+			&.has-previous {
+				border-top-right-radius: 2px;
+			}
+
+			&.has-next {
+				border-bottom-right-radius: 2px;
+			}
+		}
+
+		&.recieved {
+			background: $light;
+
+			&.has-previous {
+				border-top-left-radius: 2px;
+			}
+
+			&.has-next {
+				border-bottom-left-radius: 2px;
+			}
+		}
+
+		&:not(.has-next) {
+			margin-bottom: 16px;
+		}
+	}
+}

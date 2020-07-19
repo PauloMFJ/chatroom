@@ -1,5 +1,22 @@
 <div class="chatroom-container">
-	<div class="message-container">
-		<div class="message">Hello World!</div>
+	<div class="message-container scrollbar" #container>
+		<app-message *ngFor="let message of messages; index as i"
+			[message]="message"
+			[previous]="getStatusForPrevious(i)"
+			[next]="getStatusForNext(i)"></app-message>
+	</div>
+	<div class="input-container">
+		<button class="btn"
+        	type="submit"
+        	(click)="sendTestRecieved();">Test</button>
+        <input type="text"
+        	[(ngModel)]="message"
+            (keydown.enter)="send()"
+            placeholder="Enter your message..."
+            required>
+	    <button class="btn"
+        	type="submit"
+        	(click)="send();"
+        	[disabled]="!hasMessage">Send</button>
 	</div>
 </div>

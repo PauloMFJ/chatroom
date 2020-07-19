@@ -1,0 +1,4 @@
+<div class="message {{ sent ? 'sent' : 'recieved' }}"
+	[ngClass]="{ 'has-previous': isSameStatusAsPrevious, 'has-next': isSameStatusAsNext }">
+	<span>{{ message.message }}</span>
+</div>

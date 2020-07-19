@@ -1,4 +1,5 @@
-@import '~src/assets/styles/_variables.scss';
+@import '~src/assets/styles/forms.scss';
+@import '~src/assets/styles/scrollbar.scss';
 
 :host {
 	display: flex;
@@ -16,28 +17,29 @@
 
 	.chatroom-container {
 		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		width: 100%;
 		max-width: 768px;
-		height: 100%;
+		height: calc(100% - 64px);
+		background: $white;
+		border-radius: 16px;
+		overflow: hidden;
+		margin: 0 32px;
 
 		.message-container {
-			display: flex;
-			justify-content: flex-end;
-			flex-direction: column;
-			width: 100%;
-			margin: 32px;
-			padding: 16px;
-			background: $white;
-			border-radius: 16px;
-			overflow-y: scroll;
-
-			.message {
-				display: flex;
-				border-radius: 16px;
-				background: $light;
-				padding: 8px;
-			}
+			padding: 16px 16px 0;
 		}
 
+		.input-container {
+			display: flex;
+			justify-content: between;
+			padding: 16px;
+			border-top: 2px solid $light;
+
+			input {
+				margin: 0 16px;
+			}
+		}
 	}
 }
