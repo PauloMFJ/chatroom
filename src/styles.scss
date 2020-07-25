@@ -1,4 +1,6 @@
-@import 'assets/styles/_variables.scss';
+
+// Variables
+@import 'assets/styles/shared';
 
 // Reset
 *, *:before, *:after {
@@ -26,7 +28,6 @@ html, body {
   height: 100%;
 }
 
-// Defaults
 h1, h2, h3, h4, h5, h6 {
   @extend .roboto;
   font-weight: normal;
@@ -37,3 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
   color: $dark;
 }
+
+// Other
+@import 'assets/styles/forms';
+@import 'assets/styles/scrollbar';

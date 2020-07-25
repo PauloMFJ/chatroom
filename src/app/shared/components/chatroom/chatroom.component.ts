@@ -1,10 +1,12 @@
 import { AfterViewChecked, Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Message } from '@app/shared/models/message.model';
 import { Status } from '@app/shared/enums/status.model';
+import { fadeInOutAnimation } from '@app/shared/animations/fade-in-out.component';
 
 @Component({
   selector: 'app-chatroom',
   templateUrl: './chatroom.component.html',
+  animations: [ fadeInOutAnimation ],
   styleUrls: ['./chatroom.component.scss']
 })
 export class ChatroomComponent implements OnInit, AfterViewChecked {
