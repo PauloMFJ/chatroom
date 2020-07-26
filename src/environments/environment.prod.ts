@@ -1,4 +1,5 @@
 
 export const environment = {
-  production: true
+  production: true,
+  portfolioWebsiteBase: 'http://www.paulojorge.co.uk/'
 };
