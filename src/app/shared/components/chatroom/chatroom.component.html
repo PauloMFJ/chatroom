@@ -1,4 +1,6 @@
 <div class="chatroom-container">
+	<div class="placeholder"
+		(click)="sendTestRecieved()"></div>
 	<div class="message-container scrollbar" #container>
 		<app-message *ngFor="let message of messages; index as i"
 			[message]="message"
@@ -6,17 +8,15 @@
 			[next]="getStatusForNext(i)"></app-message>
 	</div>
 	<div class="input-container">
-		<button class="btn"
-        	type="submit"
-        	(click)="sendTestRecieved();">Test</button>
         <input type="text"
         	[(ngModel)]="message"
             (keydown.enter)="send()"
             placeholder="Enter your message..."
             required>
-	    <button class="btn"
-        	type="submit"
-        	(click)="send();"
-        	[disabled]="!hasMessage">Send</button>
+        <svg-icon src="../assets/images/send.svg"
+			[applyCss]="true"
+			class="send transition"
+			[class.disabled]="!hasMessage"
+			(click)="send()"></svg-icon>
 	</div>
 </div>

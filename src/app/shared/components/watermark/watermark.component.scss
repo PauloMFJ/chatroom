@@ -1,0 +1,16 @@
+@import '~src/assets/styles/shared';
+
+.watermark-container {
+	position: fixed;
+	right: 16px;
+	bottom: 16px;
+	height: 32px;
+	width: 32px;
+	z-index: $watermark-z-index;
+	outline: none;
+	opacity: .25;
+
+	&:hover {
+		opacity: 1;
+	}
+}

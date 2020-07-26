@@ -6,6 +6,7 @@
 	justify-content: center;
 	height: 100%;
 	width: 100%;
+	padding-top: 64px;
 	overflow: hidden;
 	background: linear-gradient(135deg, $red, $purple, $blue);
 	background-size: 200% 100%;
@@ -19,12 +20,24 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		width: 100%;
-		max-width: 768px;
+		max-width: $container-width;
 		height: calc(100% - 64px);
 		background: $white;
 		border-radius: 16px;
 		overflow: hidden;
 		margin: 0 32px;
+		position: relative;
+
+		.placeholder {
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			width: 16px;
+			height: 16px;
+			cursor: pointer;
+			border-radius: 100%;
+			background: $purple;
+		}
 
 		.message-container {
 			padding: 16px 16px 0;
@@ -32,12 +45,30 @@
 
 		.input-container {
 			display: flex;
+			align-items: center;
 			justify-content: between;
 			padding: 16px;
 			border-top: 2px solid $light;
 
-			input {
-				margin: 0 16px;
+			.send {
+				margin-left: 16px;
+
+				&, svg {
+					max-height: 24px;
+					height: 100%;
+				}
+
+				&.disabled {
+					opacity: .25;
+				}
+
+				&:not(.disabled) {
+					cursor: pointer;
+				}
+
+				&:focus {
+					transform: translateY(-2px);
+				}
 			}
 		}
 	}

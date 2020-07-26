@@ -42,3 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 // Other
 @import 'assets/styles/forms';
 @import 'assets/styles/scrollbar';
+
+.transition {
+    transition: all ease-in-out $transition-speed;
+};
