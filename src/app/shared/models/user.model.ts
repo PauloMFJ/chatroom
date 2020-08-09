@@ -2,7 +2,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class User {
 
+    id: string;
     name: string;
+
+    constructor() {
+        // TODO: Get id from server
+        this.id = new Date().getTime().toString();
+    }
 
     getForm(formBuilder: FormBuilder) {
        return formBuilder.group({

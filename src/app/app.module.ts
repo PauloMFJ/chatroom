@@ -13,6 +13,8 @@ import { MessageComponent } from './shared/components/message/message.component'
 import { HeaderComponent } from './shared/components/header/header.component';
 import { WatermarkComponent } from './shared/components/watermark/watermark.component';
 
+import { ChatService } from './shared/services/chat.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { WatermarkComponent } from './shared/components/watermark/watermark.comp
     NameFormComponent,
     MessageComponent,
     HeaderComponent,
-    WatermarkComponent,
+    WatermarkComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,9 @@ import { WatermarkComponent } from './shared/components/watermark/watermark.comp
     HttpClientModule,
     AngularSvgIconModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    ChatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

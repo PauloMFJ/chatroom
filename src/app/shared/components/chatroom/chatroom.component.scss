@@ -28,17 +28,6 @@
 		margin: 0 32px;
 		position: relative;
 
-		.placeholder {
-			position: absolute;
-			top: 8px;
-			left: 8px;
-			width: 16px;
-			height: 16px;
-			cursor: pointer;
-			border-radius: 100%;
-			background: $purple;
-		}
-
 		.message-container {
 			padding: 16px 16px 0;
 		}
