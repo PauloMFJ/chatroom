@@ -1,6 +1,6 @@
 # [Chatroom](https://app-ng-chatroom.herokuapp.com/)
 
-This repository contains the source code for [chatroom](https://app-ng-chatroom.herokuapp.com/).
+This repository contains the source code for [chatroom](https://app-chatroom-ng.herokuapp.com/).
 
 ## Build Setup
 
