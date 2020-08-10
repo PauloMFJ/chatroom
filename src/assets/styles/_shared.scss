@@ -3,19 +3,33 @@
 $roboto: 'Roboto', Helvetica, sans-serif;
 $open-sans: 'Open Sans', Helvetica, sans-serif;
 
+:root {
+	--black:      0, 0, 0;
+	--dark:       30, 30, 30;
+	--gray-dark:  68, 68, 68;
+	--gray:       102, 102, 102;
+	--gray-light: 170, 170, 170;
+	--light:      242, 242, 242;
+	--white:      255, 255, 255;
+
+	--red:        255, 165, 161;
+	--purple:     197, 175, 255;
+	--blue:       130, 203, 244;
+}
+
 // Whites / Blacks
-$black:              #000000; // Black
-$dark:               #1e1e1e; //
-$gray-dark:          #444444; //
-$gray:               #666666; // For Inactive ul links and dates
-$gray-light:         #aaaaaa; //
-$light:              #f2f2f2; // Backgrounds i.e. for buttons and containers
-$white:              #ffffff; // White
+$black:              rgb(var(--black)); // Black
+$dark:               rgb(var(--dark)); //
+$gray-dark:          rgb(var(--gray-dark)); //
+$gray:               rgb(var(--gray)); // For Inactive ul links and dates
+$gray-light:         rgb(var(--gray-light)); //
+$light:              rgb(var(--light)); // Backgrounds i.e. for buttons and containers
+$white:              rgb(var(--white)); // White
 
 // Colours:
-$red: #ffa5a1;
-$purple: #c5afff;
-$blue: #82cbf4;
+$red:    rgb(var(--red));
+$purple: rgb(var(--purple));
+$blue:   rgb(var(--blue));
 
 // Transitions
 $transition-speed: .2s;
@@ -29,3 +43,8 @@ $container-width: 768px;
 // Ordering
 $header-z-index: 1;
 $watermark-z-index: 2;
+
+// Font Sizes
+$fa-lg: 20px;
+$fa-md: 16px;
+$fa-sm: 12px;

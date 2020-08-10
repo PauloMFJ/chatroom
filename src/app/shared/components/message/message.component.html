@@ -1,4 +1,6 @@
-<div class="message {{ sent ? 'sent' : 'recieved' }}"
-	[ngClass]="{ 'has-previous': isSameStatusAsPrevious, 'has-next': isSameStatusAsNext }">
-	<span>{{ message.message }}</span>
+<div class="message-container {{ sent ? 'sent' : 'recieved' }}"
+	[ngClass]="{ 'has-previous': isSameStatusAsPrevious, 'has-next': isSameStatusAsNext }"
+	tabindex="0">
+	<div class="date transition">{{ message.date | date: 'shortTime' }}</div>
+	<div class="message">{{ message.message }}</div>
 </div>

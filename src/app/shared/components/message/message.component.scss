@@ -3,42 +3,89 @@
 :host {
 	display: flex;
 
-	.message {
-		display: inline-block;
-		padding: 8px 16px;
-		border-radius: 16px;
-		max-width: 75%;
+	.message-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
 		margin-bottom: 4px;
-		word-wrap: break-word;
+		outline: none;
+
+		.date {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: $fa-sm;
+			line-height: $fa-md;
+			transform: translateY($fa-md);
+			height: 0;
+			opacity: 0;
+		}
+
+		.message {
+			--alpha: 1;
+			display: flex;
+			padding: 8px 16px;
+			border-radius: 16px;
+			max-width: 75%;
+			word-wrap: break-word;
+			background: rgba(var(--background), var(--alpha));
+			transition: background $transition-speed;
+			outline: none;
+
+			&:hover {
+				--alpha: .5;
+			}
+		}
 
 		&.sent {
-			background: $blue;
-			color: $white;
-			margin-left: auto;
+			.message {
+				--background: var(--blue);
+				color: $white;
+				margin-left: auto;
+			}
 
-			&.has-previous {
+			&.has-previous .message {
 				border-top-right-radius: 2px;
 			}
 
-			&.has-next {
+			&.has-next .message {
 				border-bottom-right-radius: 2px;
 			}
 		}
 
 		&.recieved {
-			background: $light;
+			.message {
+				--background: var(--light);
+				margin-right: auto;
+			}
 
-			&.has-previous {
+			&.has-previous .message {
 				border-top-left-radius: 2px;
 			}
 
-			&.has-next {
+			&.has-next .message {
 				border-bottom-left-radius: 2px;
 			}
 		}
 
 		&:not(.has-next) {
 			margin-bottom: 16px;
+		}
+
+		&:focus {
+			.date {
+				transform: translateY(0);
+				height: $fa-md;
+				opacity: .5;
+			}
+
+			&.sent .message {
+				--background: var(--red);
+			}
+
+			&.recieved .message {
+				--background: var(--gray-light);
+			}
 		}
 	}
 }

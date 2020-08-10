@@ -22,6 +22,7 @@
 html, body {
   @extend .open-sans;
   font-display: auto;
+  font-size: $fa-md;
   color: $gray-dark;
   -webkit-font-smoothing: antialiased;
   width: 100%;
