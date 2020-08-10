@@ -1,6 +1,6 @@
 
 export const environment = {
   production: true,
-  serverApi: 'http://localhost:5000',
+  serverApi: 'https://app-chatroom-api.herokuapp.com/',
   portfolioWebsiteBase: 'http://www.paulojorge.co.uk/'
 };
