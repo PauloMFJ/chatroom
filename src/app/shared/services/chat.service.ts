@@ -30,14 +30,14 @@ export class ChatService {
       .build();
   }
 
-  private startConnection() {
+  private startConnection = () => {
     this.hubConnection
       .start()
       .then(() => {
         console.log('Hub connection started!');
         this.connectionEstablishedSubject.next(true);
       })
-      .catch(err => {
+      .catch((error) => {
         console.log('Error while establishing connection, retrying...');
         setTimeout(function() { this.startConnection(); }, 5000);
       });
