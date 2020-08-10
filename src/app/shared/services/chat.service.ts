@@ -19,6 +19,7 @@ export class ChatService {
   private connectionEstablishedSubject$ = this.connectionEstablishedSubject.asObservable();
 
   constructor() {
+    console.log(this.apiRoot)
     this.createConnection();
     this.startConnection();
     this.listenToConnection();
@@ -30,16 +31,16 @@ export class ChatService {
       .build();
   }
 
-  private startConnection = () => {
+  private startConnection() {
     this.hubConnection
       .start()
       .then(() => {
-        console.log('Hub connection started!');
+        console.log('Connection established!');
         this.connectionEstablishedSubject.next(true);
       })
       .catch((error) => {
         console.log('Error while establishing connection, retrying...');
-        setTimeout(function() { this.startConnection(); }, 5000);
+        setTimeout(() => this.startConnection(), 5000);
       });
   }
 
