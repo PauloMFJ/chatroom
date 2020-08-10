@@ -1,6 +1,4 @@
-<div class="message-container {{ sent ? 'sent' : 'recieved' }}"
+<div class="message {{ sent ? 'sent' : 'received' }}"
 	[ngClass]="{ 'has-previous': isSameStatusAsPrevious, 'has-next': isSameStatusAsNext }"
-	tabindex="0">
-	<div class="date transition">{{ message.date | date: 'shortTime' }}</div>
-	<div class="message">{{ message.message }}</div>
-</div>
+	tabindex="0">{{ message.message }}</div>
+<div class="date transition">{{ message.date | date: 'shortTime' }}</div>
