@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class WatermarkComponent {
 
+  pathToGithub = `${environment.githubWebsiteBase}`;
   pathToPortfolio = `${environment.portfolioWebsiteBase}`;
 
   constructor() { }
