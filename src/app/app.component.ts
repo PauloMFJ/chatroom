@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { fadeInOutAnimation } from '@app/shared/animations/fade-in-out.component';
+import { User } from '@app/shared/models/user.model';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,5 @@ import { fadeInOutAnimation } from '@app/shared/animations/fade-in-out.component
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  name: string;
-  
+  user: User;
 }
