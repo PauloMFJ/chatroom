@@ -8,5 +8,6 @@ import { fadeInOutAnimation } from '@app/shared/animations/fade-in-out.component
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  name = 'Paulo';
+  name: string;
+  
 }

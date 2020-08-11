@@ -11,6 +11,7 @@
 	justify-content: center;
 	background: rgba(var(--black), .5);
 	backdrop-filter: blur(4px);
+	z-index: 3;
 
 	.change-name-container {
 		display: flex;

@@ -4,6 +4,8 @@
 		class="chatroom"></svg-icon>
 	<div class="nav">
 		<div class="item transition">Rooms</div>
-		<div class="item transition">Change Name</div>
+		<div class="item transition"
+			(click)="changeName()"
+			(keydown.enter)="changeName()">Change Name</div>
 	</div>
 </div>
