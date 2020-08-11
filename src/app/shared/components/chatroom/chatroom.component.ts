@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, ViewChild, ElementRef } from '@angular/core';
+import { AfterViewChecked, Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { Message } from '@app/shared/models/message.model';
 import { Status } from '@app/shared/enums/status.model';
 import { fadeInOutAnimation } from '@app/shared/animations/fade-in-out.component';
@@ -15,13 +15,13 @@ export class ChatroomComponent implements AfterViewChecked {
 
   messages = [];
   message: string;
-  user: User;
+
+  @Input() user: User;
 
   @ViewChild('container', { static: false }) container: ElementRef;
 
   constructor(private chatService: ChatService) {
     this.listenForMessages();
-    this.user = new User();
   }
 
   ngAfterViewChecked() {
