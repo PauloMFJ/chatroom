@@ -23,9 +23,9 @@
 		padding: 8px 16px;
 		border-radius: 16px;
 		max-width: 75%;
-		word-wrap: break-word;
 		background: rgba(var(--background), var(--alpha));
 		transition: background $transition-speed;
+	    word-break: break-all;
 		outline: none;
 
 		&.sent {
