@@ -5,12 +5,8 @@ import { ChatroomComponent } from '@app/shared/components/chatroom/chatroom/chat
 const routes: Routes = [
     {
         path: '**',
-        redirectTo: 'chatroom',
-    },
-    {
-        path: 'chatroom',
         component: ChatroomComponent,
-    }
+    },
 ];
 
 @NgModule({

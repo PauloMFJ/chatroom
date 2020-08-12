@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './change-name.component.html',
   styleUrls: ['./change-name.component.scss']
 })
-export class ChangeNameComponent implements OnInit {
+export class ChangeNameComponent {
 
   user = new User();
   userForm: FormGroup;
@@ -17,8 +17,6 @@ export class ChangeNameComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     this.userForm = this.user.getForm(this.formBuilder);
   }
-
-  ngOnInit() { }
 
   changeName() {
      this.user.from(this.userForm);
