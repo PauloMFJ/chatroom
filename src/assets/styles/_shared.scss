@@ -15,6 +15,7 @@ $open-sans: 'Open Sans', Helvetica, sans-serif;
 	--red:        255, 165, 161;
 	--purple:     197, 175, 255;
 	--blue:       130, 203, 244;
+	--green:      116, 226, 57;
 }
 
 // Whites / Blacks
@@ -30,6 +31,7 @@ $white:              rgb(var(--white)); // White
 $red:    rgb(var(--red));
 $purple: rgb(var(--purple));
 $blue:   rgb(var(--blue));
+$green:  rgb(var(--green));
 
 // Transitions
 $transition-speed: .2s;
@@ -45,6 +47,11 @@ $header-z-index: 1;
 $watermark-z-index: 2;
 
 // Font Sizes
-$fa-lg: 20px;
-$fa-md: 16px;
-$fa-sm: 12px;
+$fs-lg: 20px;
+$fs-md: 16px;
+$fs-sm: 12px;
+
+// Border Radius's
+$br-lg: 16px;
+$br-md: 12px;
+$br-sm: 8px;

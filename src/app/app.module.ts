@@ -7,11 +7,12 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChatroomComponent } from './shared/components/chatroom/chatroom.component';
-import { NameFormComponent } from './shared/components/name-form/name-form.component';
-import { MessageComponent } from './shared/components/message/message.component';
+import { ChatroomComponent } from './shared/components/chatroom/chatroom/chatroom.component';
+import { MessageComponent } from './shared/components/chatroom/message/message.component';
+import { OnlineUsersComponent } from './shared/components/chatroom/online-users/online-users.component';
+import { ChangeNameComponent } from './shared/components/change-name/change-name.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { WatermarkComponent } from './shared/components/watermark/watermark.component';
+import { WatermarksComponent } from './shared/components/watermarks/watermarks.component';
 
 import { ChatService } from './shared/services/chat.service';
 
@@ -19,10 +20,11 @@ import { ChatService } from './shared/services/chat.service';
   declarations: [
     AppComponent,
     ChatroomComponent,
-    NameFormComponent,
+    ChangeNameComponent,
     MessageComponent,
+    OnlineUsersComponent,
     HeaderComponent,
-    WatermarkComponent
+    WatermarksComponent,
   ],
   imports: [
     BrowserModule,

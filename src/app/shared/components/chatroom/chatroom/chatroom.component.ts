@@ -15,13 +15,13 @@ export class ChatroomComponent implements AfterViewChecked {
 
   messages = [];
   message: string;
-
-  @Input() user: User;
+  user: User;
 
   @ViewChild('container', { static: false }) container: ElementRef;
 
   constructor(private chatService: ChatService) {
     this.listenForMessages();
+    this.user = new User();
   }
 
   ngAfterViewChecked() {

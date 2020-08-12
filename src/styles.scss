@@ -18,11 +18,27 @@
   font-family: $open-sans;
 }
 
+.fs-lg {
+  font-size: $fs-lg;
+}
+
+.fs-md {
+  font-size: $fs-md;
+}
+
+.fs-sm {
+  font-size: $fs-sm;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
 // Defaults
 html, body {
   @extend .open-sans;
   font-display: auto;
-  font-size: $fa-md;
+  font-size: $fs-md;
   color: $gray-dark;
   -webkit-font-smoothing: antialiased;
   width: 100%;
@@ -40,10 +56,14 @@ h1, h2, h3, h4, h5, h6 {
   color: $dark;
 }
 
-// Other
-@import 'assets/styles/forms';
-@import 'assets/styles/scrollbar';
-
+// Transitions
 .transition {
     transition: all ease-in-out $transition-speed;
-};
+}
+
+// Other
+@import 'assets/styles/cards';
+@import 'assets/styles/containers';
+@import 'assets/styles/forms';
+@import 'assets/styles/links';
+@import 'assets/styles/scrollbar';

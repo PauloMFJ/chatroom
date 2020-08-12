@@ -1,0 +1,50 @@
+@import '~src/assets/styles/shared';
+
+:host {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	.container {
+		display: flex;
+		margin: 32px;
+	}
+
+	.card {
+		justify-content: flex-end;
+
+		.message-container {
+			padding: 16px 16px 0;
+		}
+
+		.input-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 16px;
+			box-shadow: 0 0 8px rgba(var(--black), .1);
+			z-index: 1;
+
+			.send {
+				margin-left: 16px;
+
+				&, svg {
+					height: 24px;
+					width: 24px;
+				}
+
+				&.disabled {
+					opacity: .25;
+				}
+
+				&:not(.disabled) {
+					cursor: pointer;
+				}
+
+				&:focus {
+					transform: translateY(-2px);
+				}
+			}
+		}
+	}
+}

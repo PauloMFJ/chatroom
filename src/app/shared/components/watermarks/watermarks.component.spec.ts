@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NameFormComponent } from './name-form.component';
+import { WatermarksComponent } from './watermarks.component';
 
-describe('NameFormComponent', () => {
-  let component: NameFormComponent;
-  let fixture: ComponentFixture<NameFormComponent>;
+describe('WatermarksComponent', () => {
+  let component: WatermarksComponent;
+  let fixture: ComponentFixture<WatermarksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NameFormComponent ]
+      declarations: [ WatermarksComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NameFormComponent);
+    fixture = TestBed.createComponent(WatermarksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

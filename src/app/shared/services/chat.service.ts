@@ -19,7 +19,6 @@ export class ChatService {
   private connectionEstablishedSubject$ = this.connectionEstablishedSubject.asObservable();
 
   constructor() {
-    console.log(this.apiRoot)
     this.createConnection();
     this.startConnection();
     this.listenToConnection();

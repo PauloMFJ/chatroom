@@ -8,9 +8,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: $fa-sm;
-		line-height: $fa-md;
-		transform: translateY($fa-md);
+		font-size: $fs-sm;
+		line-height: $fs-md;
+		transform: translateY($fs-md);
 		height: 0;
 		opacity: 0;
 	}
@@ -22,7 +22,7 @@
 		margin-bottom: 4px;
 		outline: none;
 		padding: 8px 16px;
-		border-radius: 16px;
+		border-radius: $br-lg;
 		max-width: 75%;
 		background: rgba(var(--background), var(--alpha));
 		transition: background $transition-speed;
@@ -30,7 +30,7 @@
 		outline: none;
 
 		.name {
-			font-size: $fa-sm;
+			font-size: $fs-sm;
 			opacity: .75;
 		}
 
@@ -72,7 +72,7 @@
 		&:focus {
 			~ .date {
 				transform: translateY(0);
-				height: $fa-md;
+				height: $fs-md;
 				opacity: .5;
 			}
 

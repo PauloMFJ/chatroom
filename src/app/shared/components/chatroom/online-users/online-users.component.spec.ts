@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WatermarkComponent } from './watermark.component';
+import { OnlineUsersComponent } from './online-users.component';
 
-describe('WatermarkComponent', () => {
-  let component: WatermarkComponent;
-  let fixture: ComponentFixture<WatermarkComponent>;
+describe('OnlineUsersComponent', () => {
+  let component: OnlineUsersComponent;
+  let fixture: ComponentFixture<OnlineUsersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WatermarkComponent ]
+      declarations: [ OnlineUsersComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WatermarkComponent);
+    fixture = TestBed.createComponent(OnlineUsersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

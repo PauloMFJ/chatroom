@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="card">
+		<div class="message-container scrollbar" #container>
+			<app-message *ngFor="let message of messages; index as i"
+				[message]="message"
+				[previous]="getStatusForPrevious(i)"
+				[next]="getStatusForNext(i)"></app-message>
+		</div>
+		<div class="input-container">
+	        <input type="text"
+	        	[(ngModel)]="message"
+	            (keydown.enter)="send()"
+	            placeholder="Aa"
+	            required>
+	        <svg-icon src="../assets/images/send.svg"
+				[applyCss]="true"
+				class="send transition"
+				[class.disabled]="!hasMessage"
+				(click)="send()"></svg-icon>
+		</div>
+	</div>
+	<!-- <app-online-users></app-online-users> -->
+</div>
+<app-change-name *ngIf="!user?.name" [@fadeInOut]
+	(userChangedEvent)="user = $event"></app-change-name>

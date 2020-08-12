@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+
+  readonly items = [
+    { link: '/chatroom', title: 'Chatroom' },
+//    { link: '/rooms', title: 'Rooms' },
+  ];
 
   constructor() { }
 
-  ngOnInit() { }
-
-  changeName() {
-
-  }
 }

@@ -38,9 +38,10 @@
 				padding: 0 8px;
 				height: 100%;
 				cursor: pointer;
+				outline: none;
 				opacity: .5;
 
-				&:hover, &:focus {
+				&.active, &:hover, &:focus {
 					opacity: 1;
 				}
 			}

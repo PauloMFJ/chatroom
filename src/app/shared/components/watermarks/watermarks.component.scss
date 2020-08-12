@@ -3,6 +3,7 @@
 :host {
 	position: fixed;
 	right: 16px;
+	bottom: 16px;
 	display: flex;
 	align-items: center;
 	z-index: $watermark-z-index;
@@ -21,16 +22,4 @@
 			margin-right: 16px;
 		}
 	}
-}
-
-@media screen and (min-width: $container-width + 196px) {
-    :host {
-        bottom: 16px !important;
-    }
-}
-
-@media screen and (max-width: $container-width + 196px) {
-    :host {
-        top: 20px !important;
-    }
 }

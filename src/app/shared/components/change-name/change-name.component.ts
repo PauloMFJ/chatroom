@@ -3,11 +3,11 @@ import { User } from '@app/shared/models/user.model';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-name-form',
-  templateUrl: './name-form.component.html',
-  styleUrls: ['./name-form.component.scss']
+  selector: 'app-change-name',
+  templateUrl: './change-name.component.html',
+  styleUrls: ['./change-name.component.scss']
 })
-export class NameFormComponent implements OnInit {
+export class ChangeNameComponent implements OnInit {
 
   user = new User();
   userForm: FormGroup;
@@ -20,7 +20,7 @@ export class NameFormComponent implements OnInit {
 
   ngOnInit() { }
 
-  submitName() {
+  changeName() {
      this.user.from(this.userForm);
      this.userChangedEvent.emit(this.user);
   }
