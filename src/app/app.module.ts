@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatroomComponent } from './shared/components/chatroom/chatroom/chatroom.component';
 import { MessageComponent } from './shared/components/chatroom/message/message.component';
-import { OnlineUsersComponent } from './shared/components/chatroom/online-users/online-users.component';
 import { ChangeNameComponent } from './shared/components/change-name/change-name.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { WatermarksComponent } from './shared/components/watermarks/watermarks.component';
@@ -22,7 +21,6 @@ import { ChatService } from './shared/services/chat.service';
     ChatroomComponent,
     ChangeNameComponent,
     MessageComponent,
-    OnlineUsersComponent,
     HeaderComponent,
     WatermarksComponent,
   ],
