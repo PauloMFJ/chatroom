@@ -7,7 +7,7 @@
 	padding-top: $header-height;
 	background: linear-gradient(135deg, $red, $purple, $blue);
 	background-size: 200% 100%;
-    animation: gradient 30s ease infinite;
+  animation: gradient 30s ease infinite;
 }
 
 @keyframes gradient {

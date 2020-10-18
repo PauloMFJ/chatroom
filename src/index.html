@@ -2,12 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-	    <base href="/">
+	  <base href="/">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	    <title>Chatroom</title>
+		<!-- Title -->
+	  <title>Chatroom</title>
 
-	    <!-- Favicon -->
+	  <!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -19,35 +20,35 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto%7COpen+Sans' rel='stylesheet'>
 
-	    <style type="text/css">
-	        body, html {
-	            height: 100%;
-	            margin: 0;
-	            padding: 0;
-	            position: relative;
-	        }
+	  <style type="text/css">
+      body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
 
 			.loader {
 				position: relative;
-			    display: flex;
-			    flex-direction: column;
-			    align-items: center;
-			    justify-content: center;
-			    height: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: center;
+		    height: 100%;
 			}
 
 			.loader > img {
-		        max-width: 96px;
-		        max-height: 96px;
+        max-width: 96px;
+        max-height: 96px;
 			}
 
 			.on-load {
-			    animation: on-load .1s ease-in both;
+		    animation: on-load .1s ease-in both;
 			}
 
 			@keyframes on-load {
-			    from { opacity: 0; }
-			    to   { opacity: 1; }
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
 			}
 
 			.pulse {
@@ -55,9 +56,9 @@
 			}
 
 			@keyframes pulse {
-			    0%   { transform: scale(0.9); opacity: 0.7; }
-			    50%  { transform: scale(1);   opacity: 1; }
-			    100% { transform: scale(0.9); opacity: 0.7; }
+		    0%   { transform: scale(0.9); opacity: 0.7; }
+		    50%  { transform: scale(1);   opacity: 1; }
+		    100% { transform: scale(0.9); opacity: 0.7; }
 			}
 
 			.noscript-warning {

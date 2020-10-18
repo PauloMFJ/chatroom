@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static(__dirname + '/dist/ng-chatroom'));
 
 app.get('/*', function(req,res) {
-  const index = path.join(__dirname, 'build', 'index.html');
+  const index = path.join(__dirname + '/dist/ng-chatroom/index.html');
   res.sendFile(index);
 });
 
