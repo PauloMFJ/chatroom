@@ -74,6 +74,10 @@ h3 {
   font-size: 24px;
 }
 
+.transition {
+  transition: all ease-in-out $transition-speed;
+}
+
 // Other
 @import "assets/styles/cards";
 @import "assets/styles/containers";
