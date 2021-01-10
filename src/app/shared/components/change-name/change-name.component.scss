@@ -2,10 +2,6 @@
 
 #change-name-container {
   display: flex;
+  align-items: center;
   max-width: 512px;
-  margin-left: auto;
-
-  .btn {
-    margin-left: 16px;
-  }
 }

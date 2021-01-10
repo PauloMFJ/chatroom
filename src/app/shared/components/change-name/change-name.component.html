@@ -4,10 +4,10 @@
          placeholder="Nickname..."
          required
          type="text" />
-  <button (click)="changeName()"
-          [disabled]="userForm.invalid"
-          class="btn"
-          type="button">
-    Update
-  </button>
+  <svg-icon (click)="changeName()"
+            [applyCss]="true"
+            [class.disabled]="userForm.invalid"
+            class="icon transition"
+            src="../assets/images/edit.svg">
+  </svg-icon>
 </form>

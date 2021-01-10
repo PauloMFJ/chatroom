@@ -34,3 +34,25 @@ input {
     cursor: default;
   }
 }
+
+.icon {
+  margin-left: 16px;
+
+  &,
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+
+  &.disabled {
+    opacity: 0.25;
+  }
+
+  &:not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:focus {
+    transform: translateY(-2px);
+  }
+}
