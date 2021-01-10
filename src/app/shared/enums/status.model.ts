@@ -1,5 +1,4 @@
-
 export enum Status {
-    Sent = 1,
-    Recieved = 2
+  Sent = 1,
+  Recieved = 2
 }

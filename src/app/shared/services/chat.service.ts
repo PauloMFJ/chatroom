@@ -1,14 +1,13 @@
-import { Injectable } from '@angular/core';
-import { HubConnection, HubConnectionBuilder } from '@aspnet/signalr';
-import { Message } from '@app/shared/models/message.model';
-import { Observable, Subject } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { Injectable } from "@angular/core";
+import { HubConnection, HubConnectionBuilder } from "@aspnet/signalr";
+import { Message } from "@app/shared/models/message.model";
+import { Observable, Subject } from "rxjs";
+import { environment } from "src/environments/environment";
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: "root"
 })
 export class ChatService {
-
   private apiRoot = `${environment.serverApi}chathub/`;
   private hubConnection: HubConnection;
 
@@ -34,21 +33,23 @@ export class ChatService {
     this.hubConnection
       .start()
       .then(() => {
-        console.log('Connection established!');
+        console.log("Connection established!");
         this.connectionEstablishedSubject.next(true);
       })
-      .catch((error) => {
-        console.log('Error while establishing connection, retrying...');
+      .catch(error => {
+        console.log("Error while establishing connection, retrying...");
         setTimeout(() => this.startConnection(), 5000);
       });
   }
 
   private listenToConnection() {
-    this.hubConnection.on('NewMessage', (message) => this.messageSubject.next(message));
+    this.hubConnection.on("NewMessage", message =>
+      this.messageSubject.next(message)
+    );
   }
 
   sendMessage(message: Message) {
-    this.hubConnection.invoke('SendMessage', message);
+    this.hubConnection.invoke("SendMessage", message);
   }
 
   getMessage(): Observable<Message> {

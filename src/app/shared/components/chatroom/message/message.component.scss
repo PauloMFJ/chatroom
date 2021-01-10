@@ -1,89 +1,88 @@
-@import '~src/assets/styles/shared';
+@import "~src/assets/styles/shared";
 
 :host {
-	display: flex;
-	flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 
-	.date {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: $fs-sm;
-		line-height: $fs-md;
-		transform: translateY($fs-md);
-		height: 0;
-		opacity: 0;
-	}
+  .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $fs-sm;
+    line-height: $fs-md;
+    transform: translateY($fs-md);
+    height: 0;
+    opacity: 0;
+  }
 
-	.message {
-		--alpha: 1;
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 4px;
-		outline: none;
-		padding: 8px 16px;
-		border-radius: $br-lg;
-		max-width: 75%;
-		background: rgba(var(--background), var(--alpha));
-		transition: background $transition-speed;
-	    word-break: break-all;
-		outline: none;
+  .message {
+    --alpha: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: $br-lg;
+    max-width: 75%;
+    background: rgba(var(--background), var(--alpha));
+    transition: background $transition-speed;
+    word-break: break-all;
+    outline: none;
 
-		.name {
-			font-size: $fs-sm;
-			opacity: .75;
-		}
+    .name {
+      font-size: $fs-sm;
+      opacity: 0.75;
+    }
 
-		&.sent {
-			--background: var(--blue);
-			color: $white;
-			margin-left: auto;
+    &.sent {
+      --background: var(--blue);
+      color: $white;
+      margin-left: auto;
 
-			&.has-previous {
-				border-top-right-radius: 2px;
-			}
+      &.has-previous {
+        border-top-right-radius: 2px;
+      }
 
-			&.has-next {
-				border-bottom-right-radius: 2px;
-			}
-		}
+      &.has-next {
+        border-bottom-right-radius: 2px;
+      }
+    }
 
-		&.received {
-			--background: var(--light);
-			margin-right: auto;
+    &.received {
+      --background: var(--light);
+      margin-right: auto;
 
-			&.has-previous {
-				border-top-left-radius: 2px;
-			}
+      &.has-previous {
+        border-top-left-radius: 2px;
+      }
 
-			&.has-next {
-				border-bottom-left-radius: 2px;
-			}
-		}
+      &.has-next {
+        border-bottom-left-radius: 2px;
+      }
+    }
 
-		&:not(.has-next) {
-			margin-bottom: 16px;
-		}
+    &:not(.has-next) {
+      margin-bottom: 16px;
+    }
 
-		&:hover {
-			--alpha: .5;
-		}
+    &:hover {
+      --alpha: 0.5;
+    }
 
-		&:focus {
-			~ .date {
-				transform: translateY(0);
-				height: $fs-md;
-				opacity: .5;
-			}
+    &:focus {
+      ~ .date {
+        transform: translateY(0);
+        height: $fs-md;
+        opacity: 0.5;
+      }
 
-			&.sent {
-				--background: var(--purple);
-			}
+      &.sent {
+        --background: var(--purple);
+      }
 
-			&.received {
-				--background: var(--gray-light);
-			}
-		}
-	}
-
+      &.received {
+        --background: var(--gray-light);
+      }
+    }
+  }
 }

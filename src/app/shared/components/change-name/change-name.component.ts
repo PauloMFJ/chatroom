@@ -1,14 +1,13 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { User } from '@app/shared/models/user.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { User } from "@app/shared/models/user.model";
+import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
-  selector: 'app-change-name',
-  templateUrl: './change-name.component.html',
-  styleUrls: ['./change-name.component.scss']
+  selector: "app-change-name",
+  templateUrl: "./change-name.component.html",
+  styleUrls: ["./change-name.component.scss"]
 })
 export class ChangeNameComponent {
-
   user = new User();
   userForm: FormGroup;
 
@@ -19,7 +18,7 @@ export class ChangeNameComponent {
   }
 
   changeName() {
-     this.user.from(this.userForm);
-     this.userChangedEvent.emit(this.user);
+    this.user.from(this.userForm);
+    this.userChangedEvent.emit(this.user);
   }
 }

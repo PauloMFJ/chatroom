@@ -1,26 +1,26 @@
-@import '~src/assets/styles/shared';
+@import "~src/assets/styles/shared";
 
 :host {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(var(--black), .5);
-	backdrop-filter: blur(4px);
-	z-index: 3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--black), 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 3;
 
-	.change-name-container {
-		display: flex;
-		flex-direction: column;
-		background: $white;
-		border-radius: 8px;
-		padding: 16px;
-		width: 100%;
-		max-width: 512px;
-		margin: 16px;
-	}
+  .change-name-container {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 512px;
+    margin: 16px;
+  }
 }

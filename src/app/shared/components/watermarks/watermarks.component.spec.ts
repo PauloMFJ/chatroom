@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WatermarksComponent } from './watermarks.component';
+import { WatermarksComponent } from "./watermarks.component";
 
-describe('WatermarksComponent', () => {
+describe("WatermarksComponent", () => {
   let component: WatermarksComponent;
   let fixture: ComponentFixture<WatermarksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WatermarksComponent ]
-    })
-    .compileComponents();
+      declarations: [WatermarksComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('WatermarksComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

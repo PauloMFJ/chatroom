@@ -1,10 +1,13 @@
 <div class="container">
-	<svg-icon src="../assets/images/chatroom.svg"
-		[applyCss]="true"
-		class="chatroom"></svg-icon>
-	<div class="nav">
-		<div *ngFor="let item of items"
-			class="item transition"
-			[routerLink]="[item.link]">{{ item.title }}</div>
-	</div>
+  <svg-icon [applyCss]="true"
+            class="chatroom"
+            src="../assets/images/chatroom.svg">
+  </svg-icon>
+  <div class="nav">
+    <div [routerLink]="[item.link]"
+         *ngFor="let item of items"
+         class="item transition">
+      {{ item.title }}
+    </div>
+  </div>
 </div>

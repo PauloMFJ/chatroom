@@ -1,14 +1,15 @@
-<form [formGroup]="userForm"
-    class="change-name-container">
-    <h1>{{ user?.name ? 'Welcome ' + user?.name : 'Welcome' }}!</h1>
-    <div class="field">
-        <input type="text"
-            placeholder="Enter your nickname..."
-            formControlName="name"
-            required>
-    </div>
-    <button class="btn"
-        type="button"
-        (click)="changeName()"
-        [disabled]="userForm.invalid">Set Name</button>
+<form [formGroup]="userForm" class="change-name-container">
+  <h1>{{ user?.name ? 'Welcome ' + user?.name : 'Welcome' }}!</h1>
+  <div class="field">
+    <input formControlName="name"
+           placeholder="Enter your nickname..."
+           required
+           type="text" />
+  </div>
+  <button (click)="changeName()"
+          [disabled]="userForm.invalid"
+          class="btn"
+          type="button">
+    Set Name
+  </button>
 </form>

@@ -1,25 +1,25 @@
-@import '~src/assets/styles/shared';
+@import "~src/assets/styles/shared";
 
 :host {
-	position: fixed;
-	right: 16px;
-	bottom: 16px;
-	display: flex;
-	align-items: center;
-	z-index: $watermark-z-index;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  z-index: $watermark-z-index;
 
-	> .watermark {
-		height: 24px;
-		width: 24px;
-		outline: none;
-		opacity: .25;
+  > .watermark {
+    height: 24px;
+    width: 24px;
+    outline: none;
+    opacity: 0.25;
 
-		&:hover {
-			opacity: 1;
-		}
+    &:hover {
+      opacity: 1;
+    }
 
-		&:not(:last-child) {
-			margin-right: 16px;
-		}
-	}
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
 }

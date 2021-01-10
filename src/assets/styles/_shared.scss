@@ -1,40 +1,39 @@
-
 // Fonts
-$roboto: 'Roboto', Helvetica, sans-serif;
-$open-sans: 'Open Sans', Helvetica, sans-serif;
+$roboto: "Roboto", Helvetica, sans-serif;
+$open-sans: "Open Sans", Helvetica, sans-serif;
 
 :root {
-	--black:      0, 0, 0;
-	--dark:       30, 30, 30;
-	--gray-dark:  68, 68, 68;
-	--gray:       102, 102, 102;
-	--gray-light: 170, 170, 170;
-	--light:      242, 242, 242;
-	--white:      255, 255, 255;
+  --black: 0, 0, 0;
+  --dark: 30, 30, 30;
+  --gray-dark: 68, 68, 68;
+  --gray: 102, 102, 102;
+  --gray-light: 170, 170, 170;
+  --light: 242, 242, 242;
+  --white: 255, 255, 255;
 
-	--red:        255, 165, 161;
-	--purple:     197, 175, 255;
-	--blue:       130, 203, 244;
-	--green:      116, 226, 57;
+  --red: 255, 165, 161;
+  --purple: 197, 175, 255;
+  --blue: 130, 203, 244;
+  --green: 116, 226, 57;
 }
 
 // Whites / Blacks
-$black:              rgb(var(--black)); // Black
-$dark:               rgb(var(--dark)); //
-$gray-dark:          rgb(var(--gray-dark)); //
-$gray:               rgb(var(--gray)); // For Inactive ul links and dates
-$gray-light:         rgb(var(--gray-light)); //
-$light:              rgb(var(--light)); // Backgrounds i.e. for buttons and containers
-$white:              rgb(var(--white)); // White
+$black: rgb(var(--black)); // Black
+$dark: rgb(var(--dark)); //
+$gray-dark: rgb(var(--gray-dark)); //
+$gray: rgb(var(--gray)); // For Inactive ul links and dates
+$gray-light: rgb(var(--gray-light)); //
+$light: rgb(var(--light)); // Backgrounds i.e. for buttons and containers
+$white: rgb(var(--white)); // White
 
 // Colours:
-$red:    rgb(var(--red));
+$red: rgb(var(--red));
 $purple: rgb(var(--purple));
-$blue:   rgb(var(--blue));
-$green:  rgb(var(--green));
+$blue: rgb(var(--blue));
+$green: rgb(var(--green));
 
 // Transitions
-$transition-speed: .2s;
+$transition-speed: 0.2s;
 
 // Header
 $header-height: 64px;

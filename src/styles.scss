@@ -1,9 +1,10 @@
-
 // Variables
-@import 'assets/styles/shared';
+@import "assets/styles/shared";
 
 // Reset
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -35,7 +36,8 @@
 }
 
 // Defaults
-html, body {
+html,
+body {
   @extend .open-sans;
   font-display: auto;
   font-size: $fs-md;
@@ -45,13 +47,17 @@ html, body {
   height: 100%;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   @extend .roboto;
   font-weight: normal;
   margin: 0 0 16px 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 900;
 }
 
@@ -69,8 +75,8 @@ h3 {
 }
 
 // Other
-@import 'assets/styles/cards';
-@import 'assets/styles/containers';
-@import 'assets/styles/forms';
-@import 'assets/styles/links';
-@import 'assets/styles/scrollbar';
+@import "assets/styles/cards";
+@import "assets/styles/containers";
+@import "assets/styles/forms";
+@import "assets/styles/links";
+@import "assets/styles/scrollbar";

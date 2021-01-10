@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ChatroomComponent } from './chatroom.component';
+import { ChatroomComponent } from "./chatroom.component";
 
-describe('ChatroomComponent', () => {
+describe("ChatroomComponent", () => {
   let component: ChatroomComponent;
   let fixture: ComponentFixture<ChatroomComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChatroomComponent ]
-    })
-    .compileComponents();
+      declarations: [ChatroomComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('ChatroomComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
