@@ -14,6 +14,7 @@ import { HeaderComponent } from "./shared/components/header/header.component";
 import { WatermarksComponent } from "./shared/components/watermarks/watermarks.component";
 
 import { ChatService } from "./shared/services/chat.service";
+import { UserService } from "./shared/services/user.service";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { ChatService } from "./shared/services/chat.service";
     HttpClientModule,
     AngularSvgIconModule.forRoot()
   ],
-  providers: [ChatService],
+  providers: [ChatService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

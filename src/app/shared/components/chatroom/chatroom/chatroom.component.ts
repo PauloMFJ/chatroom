@@ -10,6 +10,7 @@ import { Status } from "@app/shared/enums/status.model";
 import { fadeInOutAnimation } from "@app/shared/animations/fade-in-out.component";
 import { ChatService } from "@app/shared/services/chat.service";
 import { User } from "@app/shared/models/user.model";
+import { UserService } from "@app/shared/services/user.service";
 
 @Component({
   selector: "app-chatroom",
@@ -24,8 +25,12 @@ export class ChatroomComponent implements AfterViewChecked {
 
   @ViewChild("container", { static: false }) container: ElementRef;
 
-  constructor(private chatService: ChatService) {
+  constructor(
+    private chatService: ChatService,
+    private userService: UserService
+  ) {
     this.listenForMessages();
+    this.listenToUserChangeEvents();
     this.user = new User();
   }
 
@@ -40,6 +45,10 @@ export class ChatroomComponent implements AfterViewChecked {
         this.messages.push(message);
       }
     });
+  }
+
+  listenToUserChangeEvents() {
+    this.userService.getUser().subscribe(user => (this.user = user));
   }
 
   get hasMessage() {

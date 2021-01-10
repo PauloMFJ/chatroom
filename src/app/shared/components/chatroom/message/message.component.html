@@ -1,7 +1,9 @@
 <div [ngClass]="{ 'has-previous': isSameStatusAsPrevious, 'has-next': isSameStatusAsNext }"
      class="message {{ sent ? 'sent' : 'received' }}"
      tabindex="0">
-  <span *ngIf="!sent" class="name">{{ message.user.name }}</span>
+  <span *ngIf="!sent" class="name">
+    {{ message.user.name ? message.user.name : 'Unknown' }}
+  </span>
   <span>{{ message.message }}</span>
 </div>
 <div class="date transition">{{ message.date | date: 'shortTime' }}</div>

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { User } from "@app/shared/models/user.model";
 import { FormBuilder, FormGroup } from "@angular/forms";
+import { UserService } from "@app/shared/services/user.service";
 
 @Component({
   selector: "app-change-name",
@@ -13,12 +14,16 @@ export class ChangeNameComponent {
 
   @Output() userChangedEvent = new EventEmitter();
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService
+  ) {
     this.userForm = this.user.getForm(this.formBuilder);
   }
 
   changeName() {
     this.user.from(this.userForm);
-    this.userChangedEvent.emit(this.user);
+    this.userService.updateUser(this.user);
+    this.userForm.reset();
   }
 }
